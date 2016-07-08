@@ -1,0 +1,17 @@
+{
+  "name": "pci-client",
+  "version": "1.0.0",
+  "description": "PCI compliant client architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "static -p 8080 ./"
+  },
+  "author": "Adam Davis <adam@admataz.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "node-static": "^0.7.7"
+  }
+}

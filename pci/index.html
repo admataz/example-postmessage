@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PCI compliant input</title>
+    <style type="text/css">
+    body{
+        background: #efefef;
+        margin:0;
+        padding:0;
+    }
+    form{
+        padding:0;
+        margin:0;
+    }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" name="pci-input" id="pci-input">
+
+        <div class="col-sm-9 col-lg-8">
+            <h3 class="highlighted-heading">Enter Card details</h3>
+            <p class="form-helper">All fields are mandatory unless stated optional</p>
+
+
+            <!-- New creditcard payment type-->
+            <!-- New creditcard entry form fields-->
+            <section class="form-group">
+                <label for="cc-number" class="control-label">Card number <small class="text-muted soft-hide">[<span class="cc-brand"></span>]</small></label>
+                <input id="card-number" name="card_number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number">
+            </section>
+
+
+            <section class="form-group">
+                <label>Expiry Date:</label>
+
+                <ul class="group">
+                    <li>
+                        <div class="dropdown">
+                            <select id="expiry-month" class="form-control" name="expiry_month">
+                                <option value="" selected="" disabled="">MM</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option lvalue="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <select id="expiry-year" class="form-control" name="expiry_year">
+                                <option value="" selected="" disabled="">YY</option>
+                                <option value="2016">16</option>
+                                <option value="2017">17</option>
+                                <option value="2018">18</option>
+                                <option value="2019">19</option>
+                                <option value="2020">20</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section class="form-group security-number-field">
+                <label for="security-number" class="control-label">Security number:</label>
+                <p class="form-helper">The <span class="cvcLength">3</span> digits on the back of the card above your signature</p>
+                <input id="security-number" type="tel" class="security-number form-control cc-cvc" name="security_number" autocomplete="off" placeholder="CVV">
+            </section>
+
+
+        </div>
+
+    </form>
+
+
+    <script src="/pci/pci.js"></script>
+
+
+
+</body>
+
+</html>
